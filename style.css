@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Signika+Negative&family=Signika:wght@300&display=swap');
+
+
+:root{
+    --yellow:#00C4FF;
+    --black:#000;
+    --white:#fff;
+    --light-bg:#eee;
+    --border-bold:.5rem solid var(--black);
+    --border-light:.2rem solid var(--black);
+    
+ }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Signika', sans-serif;
+    font-family: 'Signika Negative', sans-serif;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    
+    
+}
+*::selection{
+    background-color: var(--black);
+    color:var(--yellow);
+}
+ 
+ *::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+ 
+ *::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+ 
+ *::-webkit-scrollbar-thumb{
+    background-color: var(--yellow);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+body{
+    overflow: hidden;
+    transition: .2s linear !important;
+    background-color: #FFF4F4;
+}
+body.active{
+    padding-left: 35rem;
+}
+.message{
+    position: sticky;
+    top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.message i{
+    cursor: pointer;
+}
+hr{
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+    
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: 1rem 3rem;
+    border: var(--border-light);
+    
+    font-size: 2rem;
+}
+.btn:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+.header{
+    position: fixed;
+    top:0; left:-35rem;
+    height: 100vh;
+    background-color: var(--white);
+    border-right: var(--border-bold);
+    width: 35rem;
+    padding:3rem 2rem;
+    text-align: center; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: column;
+    transition: .2s linear !important;
+    text-align: center;
+    
+}
+.header .logo{
+    text-transform: uppercase;
+    border-bottom: var(--border-bold);
+    font-weight: bolder;
+    font-size: 4.5rem;
+}
+.header .navbar{
+    width: 100%;
+}
+.header .navbar a{
+    display: block;
+    font-size: 2.5rem;
+    padding: 1.5rem;
+    margin: 0.5rem;
+}
+.header .navbar a.active,
+.header .navbar a:hover{
+    background-color: var(--yellow);
+}
+.header .follow a{
+    font-size: 3rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    
+}
+
+.header .follow a:hover{
+    transform: rotate(360deg);
+}
+#menu-btn{
+    position: absolute;
+    top: 0;
+    right: -5.5rem;
+    height: 4.5ren;
+    line-height: 4.5rem;
+    width: 5rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+    background-color: var(--yellow)
+
+}
+.header.active{
+    left: 0;
+}
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    body.active{
+        padding-left: 0;
+    }
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .header.active{
+        padding-top: 7rem;
+    }
+    #menu-btn.fa-times{
+        right: 0;
+    }
+    .home .image img{
+        height: auto;
+        width: 100%;
+    }
+}
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.home .image{
+    flex: 1 1 40rem;
+}
+.home .image img{
+    height: 65rem;
+    padding: 2rem;
+    border: var(--border-bold);
+}
+.home .content{
+    flex: 1 1 40rem;
+}
+.home .content h3{
+    text-transform: uppercase;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+}
+.home .content span{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--yellow);
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+.home .content p{
+    font-size: 1.7rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+/* about starts    */
+.about .heading{
+    font-size: 5rem;
+}
+.about .row-1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+}
+.about .row-1 .content{
+    flex: 1 1 50rem;
+}
+.about .row-1 .content h3{
+    color: #111;
+    font-size:3.5rem;
+
+}
+.about .row-1 .content p{
+    color: var(--black);
+    font-size: 1.7rem;
+    padding: .5rem 0;
+}
+.about .row-1 .content .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 0.5rem 0;
+}
+.about .row-1 .content .box-container .box{
+    flex: 1 1 20rem;
+}
+.about .row-1 .content .box-container .box span{
+    color: var(--yellow);
+}
+.about .row-2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+.about .row-2 .skills{
+    flex: 1 1 40rem;
+}
+.about .row-2 .skills .progress{
+    padding: 1rem 0;
+}
+.about .row-2 .skills .progress h3{
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem 0;
+    font-size: 1.7rem;
+    color: var(--black);
+    font-weight: 400;
+}
+.about .row-2 .skills .progress .bar{
+    width: 100%;
+    background: var(--black);
+    overflow: hidden;
+    height: 1rem;
+    border-radius: 50rem;
+}
+.about .row-2 .skills .progress .bar span{
+    display: block;
+    height: 100%;
+    background: var(--yellow);
+    border-radius: 50rem;
+}
+.about .row-2 .skills .progress:nth-child(1) .bar span{
+    width: 70%;
+}
+.about .row-2 .skills .progress:nth-child(2) .bar span{
+    width: 80%;
+}
+.about .row-2 .skills .progress:nth-child(3) .bar span{
+    width: 30%;
+}
+.about .row-2 .skills .progress:nth-child(4) .bar span{
+    width: 50%;
+}
+.about .row-2 .box-container{
+    flex: 1 1 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.about .row-2 .box-container .box{
+    flex: 1 1 15rem;
+    background: var(--yellow);
+    padding: 3rem;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+.about .row-2 .box-container .box h3{
+    color: var(--main-color);
+    font-size: 2rem;
+}
+.about .row-2 .box-container .box p{
+    color: #666;
+    font-size: 2.5rem;
+    padding-top: .5rem;
+}
+/* services  */
+
+.service .heading{
+    font-size: 5rem;
+}
+.service .top-container{
+    display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+   gap:1.5rem;
+   align-items: flex-start;
+}
+.service .top-container .boxs{
+    padding:3rem 2rem;
+   border:var(--border-light);
+}
+.service .top-container .boxs i{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+.service .top-container .boxs h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+    padding: 1.5rem;
+    background-color: var(--yellow);
+    font-weight: normal;
+}
+.service .top-container .boxs p{
+    line-height: 2;
+    font-size: 1.7rem;
+}
+.service .top-container .boxs:hover{
+    background-color: var(--black);
+}
+.service .top-container .boxs:hover i{
+    color: var(--white);
+}
+.service .top-container .boxs:hover p{
+    color: var(--white);
+}
+
+/* portfolio   */
+
+
+.portfolio .heading{
+    font-size: 5rem;
+}
+.portfolio .top-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+    align-items: flex-start;
+}
+.portfolio .top-container .boxs img{
+    height: 35rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10%;
+}
+.portfolio .top-container .boxs h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: normal;
+}
+.portfolio .top-container .boxs p{
+    font-size: 1.3rem;
+}
+
+/* contact  */
+.contact h1{
+    font-size: 5rem;
+}
+.contact .icons-container{
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+}
+.contact .icons-container .icons{
+    flex: 1 1 25rem;
+    text-align: center;
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: 0.5rem;
+}
+.contact .icons-container .icons i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 50%;
+}
+.contact .icons-container .icons h3{
+    color: #111;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+}
+.contact .icons-container .icons p{
+    color: #666;
+    font-size: 1.7rem;
+}
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.contact .row form{
+    flex: 1 1 55rem;
+    background: #fff;
+    padding: 0 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: 0.5rem;
+}
+.contact .row .map{
+    flex: 1 1 25rem;
+    border: 1rem solid #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .1);
+    border-radius: 0.5rem;
+    width: 100%;
+}
+.contact .row form .box,
+.contact .row form textarea{
+    width: 100%;
+    border-bottom: 0.1rem solid #333;
+    color: #333;
+    text-transform: none;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+    margin: 1rem 0;
+}
+.contact .row form .box:focus,
+.contact .row form textarea:focus{
+    border-color: var(--main-color);
+}
+.contact .row form .box::placeholder,
+.contact .row form textarea::placeholder{
+    text-transform: capitalize;
+}
+.contact .row form textarea{
+    height: 20rem;
+}
+.contact .row form .btn{
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+/* footer  */
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--white);
+    
+}
+.footer-text p{
+    font-size: 1.6rem;
+    margin-left: 450px;
+}
+.footer-icontop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: var(--white);
+    border-radius: 0.8rem;
+    transition: 0.5s ease;
+}
+.footer-icontop a:hover{
+    box-shadow: 0 0 1rem var(--white);
+}
+.footer-icontop a i{
+    font-size: 2.4rem;
+    color: var(--white);
+}
